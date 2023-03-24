@@ -4,6 +4,7 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Inherit device configuration
 $(call inherit-product, device/google/pantah/aosp_panther.mk)
+include device/google/pantah/device-aosp.mk
 
 # Parts
 $(call inherit-product-if-exists, vendor/google/pixelparts/pixelparts.mk)
