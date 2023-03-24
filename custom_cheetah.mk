@@ -2,6 +2,23 @@
 TARGET_SCREEN_HEIGHT := 3120
 TARGET_SCREEN_WIDTH := 1440
 
+TARGET_FLATTEN_APEX := false
+TARGET_INCLUDE_CARRIER_SETTINGS := true
+TARGET_USE_GOOGLE_TELEPHONY := true
+
+TARGET_INCLUDE_CAMERA_GO := true
+TARGET_SUPPORTS_LILY_EXPERIENCE := true
+TARGET_INCLUDE_ADDITIONAL_GAPPS := true
+
+# Inherit from telephony config
+$(call inherit-product, vendor/pixel-additional/configs/telephony.mk)
+
+# Inherit from apex config
+$(call inherit-product, vendor/pixel-additional/configs/apex.mk)
+
+# Inherit from gapps config
+$(call inherit-product, vendor/pixel-additional/gapps/config.mk)
+
 # Inherit device configuration
 $(call inherit-product, device/google/pantah/aosp_cheetah.mk)
 include device/google/pantah/device-aosp.mk
