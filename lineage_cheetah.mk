@@ -14,6 +14,10 @@ TARGET_BOOT_ANIMATION_RES := 1440
 # Inherit common CherishOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+#Extra UDFPS
+TARGET_HAS_UDFPS := true
+
+
 
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_BUILD_GRAPHENEOS_CAMERA := true
