@@ -10,6 +10,8 @@
     </component-override>
     <!-- panther/proprietary/product/etc/sysconfig/google_build.xml -->
     <feature name="com.google.android.feature.GOOGLE_EXPERIENCE" />
+    <!-- panther/proprietary/product/etc/sysconfig/GoogleCamera.xml -->
+    <allow-in-power-save package="com.google.android.GoogleCamera" />
     <!-- panther/proprietary/product/etc/sysconfig/nexus.xml -->
     <feature name="com.google.android.feature.PIXEL_EXPERIENCE" />
     <!-- panther/proprietary/product/etc/sysconfig/pixel_experience_2017.xml -->
