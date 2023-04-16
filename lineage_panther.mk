@@ -1,21 +1,26 @@
 # Boot animation
-TARGET_SCREEN_HEIGHT := 3120
-TARGET_SCREEN_WIDTH := 1440
+TARGET_SCREEN_HEIGHT := 2400
+TARGET_SCREEN_WIDTH := 1080
 
 TARGET_IS_PIXEL := true
 TARGET_FLATTEN_APEX := false
 TARGET_INCLUDE_CARRIER_SETTINGS := true
 TARGET_USE_GOOGLE_TELEPHONY := true
 # Boot animation
-TARGET_SCREEN_HEIGHT := 3120
-TARGET_SCREEN_WIDTH := 1440
-TARGET_BOOT_ANIMATION_RES := 1440
+TARGET_SCREEN_HEIGHT := 2400
+TARGET_SCREEN_WIDTH := 1080
+TARGET_BOOT_ANIMATION_RES := 1080
 
-# Inherit common CherishOS stuff.
+# Inherit common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+include device/google/pantah/cheetah/device-lineage.mk
 
-BUILDTYPE := Official
+#Extra UDFPS
+TARGET_HAS_UDFPS := true
+
+
+
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_BUILD_GRAPHENEOS_CAMERA := true
 TARGET_INCLUDE_PIXEL_CHARGER := true
@@ -25,13 +30,14 @@ EXTRA_UDFPS_ANIMATIONS := true
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_ENABLE_BLUR := true
 WITH_GMS := true
+
 # Inherit device configuration
 $(call inherit-product, device/google/pantah/aosp_panther.mk)
 include device/google/pantah/device-aosp.mk
 
 # Parts
-#$(call inherit-product-if-exists, vendor/google/pixelparts/pixelparts.mk)
-$(call inherit-product-if-exists, vendor/google/pixelparts/powershare/device.mk)
+$(call inherit-product-if-exists, vendor/google/pixelparts/pixelparts.mk)
+
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_panther
