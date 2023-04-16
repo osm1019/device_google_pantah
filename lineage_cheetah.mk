@@ -14,6 +14,8 @@ TARGET_BOOT_ANIMATION_RES := 1440
 # Inherit common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+include device/google/pantah/cheetah/device-lineage.mk
+
 #Extra UDFPS
 TARGET_HAS_UDFPS := true
 
@@ -35,7 +37,7 @@ include device/google/pantah/device-aosp.mk
 
 # Parts
 $(call inherit-product-if-exists, vendor/google/pixelparts/pixelparts.mk)
-#$(call inherit-product-if-exists, vendor/google/pixelparts/powershare/device.mk)
+
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_cheetah
