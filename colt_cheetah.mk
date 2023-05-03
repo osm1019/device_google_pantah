@@ -10,6 +10,8 @@ TARGET_INCLUDE_PIXEL_CHARGER := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_USES_BLUR := true
+EXTRA_UDFPS_ANIMATIONS := true
+TARGET_HAS_UDFPS := true
 
 $(call inherit-product, vendor/colt/config/common_full_phone.mk)
 
