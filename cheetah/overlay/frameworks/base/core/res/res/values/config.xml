@@ -298,4 +298,12 @@
          Note: This should be only enabled on devices with high confidence on power measurement.
     -->
     <bool name="config_bg_current_drain_auto_restrict_abusive_apps">true</bool>
+
+             <!-- Whether devices suports in-display fingerprint when screen is off -->
+    <bool name="config_supportsScreenOffUdfps">true</bool>
+
+<!-- Whether Screen Off FOD Working for this Device -->
+<bool name="config_screenOffFodWorking">true</bool>
+
+
 </resources>
