@@ -299,11 +299,18 @@
     -->
     <bool name="config_bg_current_drain_auto_restrict_abusive_apps">true</bool>
 
-             <!-- Whether devices suports in-display fingerprint when screen is off -->
-    <bool name="config_supportsScreenOffUdfps">true</bool>
 
 <!-- Whether Screen Off FOD Working for this Device -->
 <bool name="config_screenOffFodWorking">true</bool>
 
+<!-- NightLight FOD -->
+<bool name="disable_fod_night_light">true</bool> 
+
+  <!-- Whether devices suports in-display fingerprint when screen is off -->
+    <bool name="config_supportScreenOffUdfps">true</bool>
+
+ <!-- Fingerprint from stock ROM -->
+    <string name="config_stockFingerprint" translatable="false">google/cheetah/cheetah:13/TQ2A.230405.003.E1/9802792:user/release-keys</string>
+</resources>
 
 </resources>

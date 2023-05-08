@@ -66,5 +66,16 @@
 
     <!-- The time (in ms) needed to trigger the lock icon view's long-press affordance -->
     <integer name="config_lockIconLongPress" translatable="false">100</integer>
+    
+        <!-- Whether to pulse onFingerDown actions instead
+        of waking the screen while the screen is off or in lpm. -->
+    <bool name="config_pulseOnFingerDown">true</bool>
+    
+    <!-- Whether device supports an alt. ambient display -->
+<bool name="config_alt_ambient_display">true</bool>
+
+<!-- Whether the always on display mode is available. -->
+<bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
+
 </resources>
 
