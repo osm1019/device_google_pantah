@@ -12,6 +12,7 @@ TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_USES_BLUR := true
 EXTRA_UDFPS_ANIMATIONS := true
 TARGET_HAS_UDFPS := true
+TENSOR_PIXEL2 := true
 
 $(call inherit-product, vendor/colt/config/common_full_phone.mk)
 
