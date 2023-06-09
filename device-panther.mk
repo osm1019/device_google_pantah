@@ -14,9 +14,6 @@
 # limitations under the License.
 #
 
-TARGET_KERNEL_DIR ?= device/google/pantah-kernel
-TARGET_BOARD_KERNEL_HEADERS := device/google/pantah-kernel/kernel-headers
-
 $(call inherit-product-if-exists, vendor/google_devices/pantah/prebuilts/device-vendor-panther.mk)
 $(call inherit-product-if-exists, vendor/google_devices/gs201/prebuilts/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/gs201/proprietary/device-vendor.mk)
@@ -36,11 +33,6 @@ DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/pantah/device_framewor
 $(call soong_config_set,lyric,camera_hardware,panther)
 $(call soong_config_set,lyric,tuning_product,panther)
 $(call soong_config_set,google3a_config,target_device,panther)
-
-# sysconfig and permissions XML from stock
-PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/product-sysconfig-stock.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/product-sysconfig-stock.xml \
-    $(LOCAL_PATH)/product-permissions-stock.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/product-permissions-stock.xml
 
 # Init files
 PRODUCT_COPY_FILES += \
@@ -353,8 +345,3 @@ PRODUCT_COPY_FILES += \
 # Enable adpf cpu hint session for SurfaceFlinger
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     debug.sf.enable_adpf_cpu_hint=true
-    
-PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/product-sysconfig-stock.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/product-sysconfig-stock.xml \
-        $(LOCAL_PATH)/product-permissions-stock.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/product-permissions-stock.xml
-

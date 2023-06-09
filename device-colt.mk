@@ -1,3 +1,33 @@
+#
+# Copyright (C) 2022 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+#Colt specific build flags
+WITH_GAPPS := true
+TARGET_FACE_UNLOCK_SUPPORTED := false
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_INCLUDE_PIXEL_CHARGER := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_USES_BLUR := true
+EXTRA_UDFPS_ANIMATIONS := true
+TARGET_HAS_UDFPS := true
+TENSOR_PIXEL2 := true
+
+# Quick Tap
+TARGET_SUPPORTS_QUICK_TAP := true
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.columbus.use_ap_sensor=false
+
+# Stock product-sysconfig & permissions for as fail safe
+PRODUCT_COPY_FILES += \
+	device/google/pantah/product-sysconfig-stock.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/product-sysconfig-stock.xml \
+    device/google/pantah/product-permissions-stock.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/product-permissions-stock.xml
+
+# additional packages for vendor
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.1.vendor:64 \
@@ -105,8 +135,3 @@ PRODUCT_PACKAGES += \
     libtrusty_metrics:64 \
     pixelpowerstats_provider_aidl_interface-cpp.vendor:64 \
     sensors.dynamic_sensor_hal
-    
-# Quick Tap
-TARGET_SUPPORTS_QUICK_TAP := true
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    persist.columbus.use_ap_sensor=false   
