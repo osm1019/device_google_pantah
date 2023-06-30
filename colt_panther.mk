@@ -13,6 +13,9 @@ TARGET_USES_BLUR := true
 EXTRA_UDFPS_ANIMATIONS := true
 TARGET_HAS_UDFPS := true
 
+COLT_BUILD_MAINTAINER := Omariscal1019
+COLT_BUILD_TYPE := Official
+
 $(call inherit-product, vendor/colt/config/common_full_phone.mk)
 
 # Inherit device configuration
